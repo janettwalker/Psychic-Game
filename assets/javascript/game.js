@@ -28,8 +28,8 @@ var letterChoices =
 'z'
 ];
 
-var wins = 0;
-var losses = 0;
+var wins = 1;
+var losses = 1;
 var guesses = 7;
 var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
 	console.log(computerGuess);
@@ -37,22 +37,25 @@ var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.lengt
 document.onkeyup = function(event) {
 
 	letterGuess = event.key.toLowerCase();
-
+	document.getElementById("guess-letter").innerHTML = ("Letters Guessed: " + letterGuess);
 
 if (letterGuess === computerGuess){
-    wins++;
+    alert('Great Job, ' + computerGuess + ' was the correct answer.');
+    document.getElementById("total-win").innerHTML = ("Wins: " + wins++);
     replay();
-    console.log('wins');
+	console.log('wins');
 }
 
 else if (letterGuess !== computerGuess){
 	guesses--;
+
 	console.log(guesses);
 }
 
 if (guesses === 0){
 	alert('You lose!');
-	losses++;
+	alert('The correct answer was ' + computerGuess);
+	document.getElementById("total-loss").innerHTML = ("Losses: " + losses++);
 	replay();
 }
 
@@ -74,4 +77,4 @@ var replay = function(){
 // document.querySelector("#game").innerHTML = html;
 
 
-// }
+

@@ -5,23 +5,30 @@
 	<title>Psychic Game</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="container space">
 		<div class="row">
-			<div class="col-md-12">
-				<h1>Psychic Revelation</h1>
-					<img src="assets/images/crystal_ball.png">
-				<div id=game>
-					<p>Press any key to start playing!</p>
-					<p>Letters Guessed:</p>
-					<p>Wins:</p>
-					<p>Losses:</p>
-				</div>
+			<div class="col-md-2">
+				<p class="thick">Press any key to start playing!</p>
+				<p id=guess-letter>Letters Guessed: </p>
+				<p id=total-win>Wins: </p>
+				<p id=total-loss>Losses: </p>
+			</div>
+
+			<div class="col-md-8">
+				<h1>Psychic Game</h1>
+				<img src="assets/images/crystal_ball.png">
+			</div>
+			<div class="col-md-2">
+
 			</div>
 		</div>
 	</div>
+
+	
 	
 </body>
 </html>
